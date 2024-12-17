@@ -2,8 +2,7 @@
         xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
         data-namespace-typo3-fluid="true">
 
-    <f:if condition="{pagination.numberOfPages} > 1">
-    <ul class="f3-widget-paginator">
+        <ul class="f3-widget-paginator">
             <f:if condition="{pagination.previousPageNumber}">
                 <f:then>
                     <li class="previous">
@@ -48,6 +47,5 @@
                 </f:then>
             </f:if>
     </ul>
-</f:if>
 
 </html>
