@@ -7,18 +7,13 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 defined('TYPO3') or die();
 
 call_user_func(function () {
-    $extensionKey = 'hio_typo3_connector';
+    $extensionKey = 'hio_typo3_connector_uzk';
     $versionInformation = GeneralUtility::makeInstance(Typo3Version::class);
     if ($versionInformation->getMajorVersion() < 13) {
         ExtensionManagementUtility::addStaticFile(
             $extensionKey,
             'Configuration/TypoScript',
-            'HIO TYPO3 Connector',
-        );
-        ExtensionManagementUtility::addStaticFile(
-            $extensionKey,
-            'Configuration/TypoScript/Frontend',
-            'HIO TYPO3 Connector Tailwind CSS',
+            'HIO TYPO3 Connector Uni zu Köln',
         );
     }
 });

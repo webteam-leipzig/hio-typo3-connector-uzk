@@ -6,7 +6,8 @@
         "GPL-2.0-or-later"
     ],
     "require": {
-        "typo3/cms-core": "^12.4 || ^13.0"
+        "typo3/cms-core": "^12.4 || ^13.0",
+        "wtl/hio-typo3-connector": "dev-main"
     },
     "autoload": {
         "psr-4": {
@@ -17,5 +18,19 @@
         "typo3/cms": {
             "extension-key": "hio_typo3_connector_uzk"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "src/extensions/*"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/webteam-leipzig/typo3-ext-hio-typo3-connector.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/webteam-leipzig/typo3-ext-hio-typo3-connector-uzk.git"
+        }
+    ]
 }
