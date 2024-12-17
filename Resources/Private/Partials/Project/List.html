@@ -11,14 +11,14 @@
                         <f:render partial="Project/List/Item" arguments="{project:project, currentPageNumber: paginator.currentPageNumber}" />
                     </f:for>
                     </ul>
-                    <f:if condition="{pagination}">
-                        <f:then>
-                            <div class="py-4">
-                                <f:render partial="Pagination/Pagination" arguments="{pagination: pagination}" />
-                            </div>
-                        </f:then>
-                    </f:if>
                 </div>
+                <f:if condition="{pagination}">
+                    <f:then>
+                        <div class="py-4">
+                            <f:render partial="Pagination/Pagination" arguments="{pagination: pagination, currentPageNumber: paginator.currentPageNumber}" />
+                        </div>
+                    </f:then>
+                </f:if>
             </div>
     </f:then>
 
