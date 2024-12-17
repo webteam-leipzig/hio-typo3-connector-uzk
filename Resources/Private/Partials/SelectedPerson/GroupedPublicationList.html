@@ -11,14 +11,14 @@
                 <ul>
                     <f:for each="{publicationsOfThisType}" as="publication">
                         <li class="uzk15highlight">
-                            <strong>{publication.title}</strong><br />
+                            "{publication.title}",
                             <f:if condition="{publication.details.persons}">
-                                    <f:for each="{publication.details.persons}" as="person" key="personIndex">
-                                        <f:render partial="Publication/List/Authors" arguments="{person: person}" />
-                                    </f:for>
-                                </f:if>
-                                <f:if condition="{publication.details.journal}">
-                                    {publication.details.journal.title}, {publication.details.journal.releaseYear}, S. {publication.details.journal.pageRange}
+                                <f:for each="{publication.details.persons}" as="person" key="personIndex">
+                                    <f:render partial="Publication/List/Authors" arguments="{person: person}" />
+                                </f:for>
+                            </f:if>
+                            <f:if condition="{publication.details.journal}">
+                                {publication.details.journal.title}, {publication.details.journal.releaseYear}, S. {publication.details.journal.pageRange}
                             </f:if>
                         </li>
                     </f:for>
