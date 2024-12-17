@@ -4,25 +4,23 @@
 
 <f:if condition="{publication}">
     <li>
-        <p>
+        <span>
+            "<f:link.action
+                action="show"
+                arguments="{publication: publication.uid, currentPageNumber: currentPageNumber}"
+            >{publication.title}</f:link.action>", </span>
+        <f:if condition="{publication.details.persons}">
             <span>
-                "<f:link.action
-                    action="show"
-                    arguments="{publication: publication.uid, currentPageNumber: currentPageNumber}"
-                >{publication.title}</f:link.action>", </span>
-            <f:if condition="{publication.details.persons}">
-                <span>
-                    <f:for each="{publication.details.persons}" as="person" key="personIndex">
-                        <f:render partial="Publication/List/Authors" arguments="{person: person}" />
-                    </f:for>
-                </span>
-            </f:if>
-            <f:if condition="{publication.details.journal}">
-                <f:then>
-                    ({publication.details.journal.releaseYear})
-                </f:then>
-            </f:if>
-        </p>
+                <f:for each="{publication.details.persons}" as="person" key="personIndex">
+                    <f:render partial="Publication/List/Authors" arguments="{person: person}" />
+                </f:for>
+            </span>
+        </f:if>
+        <f:if condition="{publication.details.journal}">
+            <f:then>
+                ({publication.details.journal.releaseYear})
+            </f:then>
+        </f:if>
     </li>
 </f:if>
 
