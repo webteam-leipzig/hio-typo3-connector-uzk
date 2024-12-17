@@ -1,1 +1,1 @@
-page.includeCSS.hio_typo3_connector = EXT:hio_typo3_connector/Resources/Public/Css/style.min.css
+page.includeCSS.hio_typo3_connector = EXT:hio_typo3_connector_uzk/Resources/Public/Css/style.min.css
