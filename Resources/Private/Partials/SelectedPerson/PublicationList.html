@@ -3,22 +3,18 @@
         data-namespace-typo3-fluid="true" lang="en">
 
 <f:if condition="{publications}">
-    <div class="max-w-3xl text-base/7">
+    <div class="uzk15__editorblock default">
         <ul>
             <f:for each="{publications}" as="publication">
-                <li class="py-1">
-                    <strong>{publication.title}</strong><br/>
+                <li class="uzk15highlight">
+                    {publication.title}<br/>
                     <f:if condition="{publication.details.persons}">
-                        <span class="text-gray-700">
-                            <f:for each="{publication.details.persons}" as="person" key="personIndex">
-                                <f:render partial="Publication/List/Authors" arguments="{person: person}" />
-                            </f:for>
-                        </span>
+                        <f:for each="{publication.details.persons}" as="person" key="personIndex">
+                            <f:render partial="Publication/List/Authors" arguments="{person: person}" />
+                        </f:for>
                     </f:if>
                     <f:if condition="{publication.details.journal}">
-                        <span class="text-gray-700">
-                            {publication.details.journal.title}, {publication.details.journal.releaseYear}, S. {publication.details.journal.pageRange}
-                        </span>
+                        {publication.details.journal.title}, {publication.details.journal.releaseYear}, S. {publication.details.journal.pageRange}
                     </f:if>
                 </li>
             </f:for>

@@ -4,25 +4,21 @@
 
 <f:if condition="{publications}">
     <f:then>
-        <div class="max-w-3xl text-base/7">
+        <div class="uzk15__editorblock default">
             <f:groupedFor each="{publications}" as="publicationsOfThisType" groupBy="{settings.groupBy}"
                           groupKey="publicationType">
-                <h4 class="mt-2 text-primary font-semibold">{publicationType}</h4>
+                <h4 class="uzk15__standard_h4 uzk15_header_">{publicationType}</h4>
                 <ul>
                     <f:for each="{publicationsOfThisType}" as="publication">
-                        <li class="py-1">
+                        <li class="uzk15highlight">
                             <strong>{publication.title}</strong><br />
                             <f:if condition="{publication.details.persons}">
-                                <span class="text-gray-700">
                                     <f:for each="{publication.details.persons}" as="person" key="personIndex">
                                         <f:render partial="Publication/List/Authors" arguments="{person: person}" />
                                     </f:for>
-                                </span>
-                                    </f:if>
-                                    <f:if condition="{publication.details.journal}">
-                                <span class="text-gray-700">
+                                </f:if>
+                                <f:if condition="{publication.details.journal}">
                                     {publication.details.journal.title}, {publication.details.journal.releaseYear}, S. {publication.details.journal.pageRange}
-                                </span>
                             </f:if>
                         </li>
                     </f:for>
