@@ -4,20 +4,11 @@
 
 <f:if condition="{project.details}">
     <li>
-        <span>
-            "<f:link.action
+        <span>"<f:link.action
                     action="show"
                     arguments="{project: project.uid, currentPageNumber: currentPageNumber}"
-                    class="hover:underline"
-            >
-                {project.title}
-            </f:link.action>", </span>
-        <span class="py-0">
-            <f:translate key="hio.list.project.startDate" />: <f:format.date format="d.m.Y" >{project.details.startDate}</f:format.date>
-        , </span>
-        <span class="py-0">
-            <f:translate key="hio.list.project.status" />: {project.details.status}
-        </span>
+            >{project.title}</f:link.action>", </span>
+        <span><f:translate key="hio.list.project.startDate" />: <f:format.date format="d.m.Y" >{project.details.startDate}</f:format.date>, <f:translate key="hio.list.project.status" />: {project.details.status}</span>
     </li>
 </f:if>
 
