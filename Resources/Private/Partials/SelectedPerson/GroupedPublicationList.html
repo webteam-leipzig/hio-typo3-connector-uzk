@@ -4,27 +4,25 @@
 
 <f:if condition="{publications}">
     <f:then>
-        <div class="uzk15__editorblock default">
-            <f:groupedFor each="{publications}" as="publicationsOfThisType" groupBy="{settings.groupBy}"
-                          groupKey="publicationType">
-                <h4 class="uzk15__standard_h4 uzk15_header_">{publicationType}</h4>
-                <ul>
-                    <f:for each="{publicationsOfThisType}" as="publication">
-                        <li class="uzk15highlight">
-                            "{publication.title}",
-                            <f:if condition="{publication.details.persons}">
-                                <f:for each="{publication.details.persons}" as="person" key="personIndex">
-                                    <f:render partial="Publication/List/Authors" arguments="{person: person}" />
-                                </f:for>
-                            </f:if>
-                            <f:if condition="{publication.details.journal}">
-                                {publication.details.journal.title}, {publication.details.journal.releaseYear}, S. {publication.details.journal.pageRange}
-                            </f:if>
-                        </li>
-                    </f:for>
-                </ul>
-            </f:groupedFor>
-        </div>
+        <f:groupedFor each="{publications}" as="publicationsOfThisType" groupBy="{settings.groupBy}"
+                      groupKey="publicationType">
+            <h4 class="uzk15__standard_h4 uzk15_header_">{publicationType}</h4>
+            <ul>
+                <f:for each="{publicationsOfThisType}" as="publication">
+                    <li class="uzk15highlight">
+                        "{publication.title}",
+                        <f:if condition="{publication.details.persons}">
+                            <f:for each="{publication.details.persons}" as="person" key="personIndex">
+                                <f:render partial="Publication/List/Authors" arguments="{person: person}" />
+                            </f:for>
+                        </f:if>
+                        <f:if condition="{publication.details.journal}">
+                            {publication.details.journal.title}, {publication.details.journal.releaseYear}, S. {publication.details.journal.pageRange}
+                        </f:if>
+                    </li>
+                </f:for>
+            </ul>
+        </f:groupedFor>
     </f:then>
 </f:if>
 

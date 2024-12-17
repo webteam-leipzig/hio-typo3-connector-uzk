@@ -6,7 +6,7 @@
 
 <f:section name="Main">
     <f:if condition="{publications}">
-        <div class="bg-white px-6 py-6 lg:px-8">
+        <div class="uzk15__editorblock default">
             <f:if condition="{settings.groupBy  == none}">
                 <f:then>
                     <f:render partial="SelectedPerson/PublicationList" arguments="{publications: publications}"/>
@@ -17,7 +17,7 @@
                                   arguments="{publications: groupedPublications}"/>
                     </f:if>
                     <f:if condition="{ungroupedPublications}}">
-                        <h4 class="mt-2 text-primary font-semibold">
+                        <h4 class="uzk15__standard_h4 uzk15_header_">
                             <f:translate key="hio.show.person.ungroupedPublications" extensionName="HioTypo3Connector" />
                         </h4>
                         <f:render partial="SelectedPerson/PublicationList"
