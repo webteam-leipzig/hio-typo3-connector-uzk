@@ -6,12 +6,11 @@
 
 <f:section name="Main">
     <f:if condition="{person}">
-        <div class="bg-white px-6 py-6 lg:px-8">
-            <div class="max-w-3xl text-base/7 text-gray-700">
-                <f:for each="{person.projects}" as="project">
-                    <div>{project.title}</div>
-                </f:for>
-            </div>
+        <div class="uzk15__editorblock default">
+            <f:for each="{person.projects}" as="project">
+                <span>"{project.title}", </span>
+                <span><f:translate key="hio.list.project.startDate" />: <f:format.date format="d.m.Y" >{project.details.startDate}</f:format.date>, <f:translate key="hio.list.project.status" />: {project.details.status}</span>
+            </f:for>
         </div>
     </f:if>
 
