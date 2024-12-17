@@ -3,16 +3,14 @@
         data-namespace-typo3-fluid="true" lang="en">
 
 <f:if condition="{projects}">
-    <div class="uzk15__editorblock default">
-        <ul>
-            <f:for each="{projects}" as="project">
-                <li>
-                    {project.title}
-                    <br />
-                </li>
-            </f:for>
-        </ul>
-    </div>
+    <ul>
+        <f:for each="{projects}" as="project">
+            <li class="uzk15highlight">
+                {project.title}
+                <br />
+            </li>
+        </f:for>
+    </ul>
 </f:if>
 
 </html>
