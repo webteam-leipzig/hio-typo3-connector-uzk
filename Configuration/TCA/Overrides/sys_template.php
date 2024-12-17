@@ -15,5 +15,11 @@ call_user_func(function () {
             'Configuration/TypoScript',
             'HIO TYPO3 Connector Uni zu Köln',
         );
+        ExtensionManagementUtility::addStaticFile(
+            $extensionKey,
+            'Configuration/TypoScript/Frontend',
+            'HIO TYPO3 Connector Basis CSS Uni zu Köln',
+        );
+
     }
 });
