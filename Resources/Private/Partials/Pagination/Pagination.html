@@ -16,7 +16,7 @@
             </f:if>
 
             <f:for each="{pagination.allPageNumbers}" as="page">
-                <f:if condition="{currentPageNumber==page}">
+                <f:if condition="{currentPageNumber}=={page}">
                     <f:then>
                         <li class="current">
                             {page}
