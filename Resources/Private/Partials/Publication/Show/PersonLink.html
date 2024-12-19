@@ -8,8 +8,7 @@
             <f:link.action action="show"
                            pageUid="{settings.publications.personTargetPageUid}"
                            controller="Person"
-                           arguments="{person: person.id}"
-                           class="text-gray-700 hover:underline hover:text-primary px-0">{person.name}</f:link.action><br />
+                           arguments="{person: person.id}">{person.name}</f:link.action><br />
         </f:then>
         <f:else>
             {person.name}<br />
