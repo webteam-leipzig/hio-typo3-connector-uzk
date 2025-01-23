@@ -1,0 +1,16 @@
+<html
+        xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        data-namespace-typo3-fluid="true" lang="en">
+
+<f:if condition="{patents}">
+    <ul>
+        <f:for each="{patents}" as="patent">
+            <li class="uzk15highlight">
+                <span>"{patents.title}", </span>
+                <span><f:translate key="hio.patent.patentNumber" />: {patent.details.patentNumber}, <f:translate key="hio.patent.status" />: {patent.details.status}</span>
+            </li>
+        </f:for>
+    </ul>
+</f:if>
+
+</html>
