@@ -23,6 +23,12 @@
             <f:render partial="SelectedPerson/ProjectList" arguments="{projects: person.projects}"/>
         </div>
     </f:if>
+    <f:if condition="{person.patents}">
+        <div class="uzk15__editorblock default">
+            <h2>Meine Patente</h2>
+            <f:render partial="SelectedPerson/PatentList" arguments="{patents: person.patents}"/>
+        </div>
+    </f:if>
     <ul class="f3-widget-paginator">
         <li class="previous">
             <f:link.action
