@@ -6,7 +6,7 @@
     <f:for each="{citations}" as="citation" key="citationIndex">
         <f:if condition="{citation.style} == {selectedCitationStyle}">
             <f:then>
-                <f:format.html>{citation.citation}</f:format.html>
+                <f:format.html parseFuncTSPath="lib.parseFunc">{citation.citation}</f:format.html>
             </f:then>
         </f:if>
     </f:for>
