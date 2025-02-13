@@ -3,13 +3,13 @@
         data-namespace-typo3-fluid="true" lang="en">
 
 <f:if condition="{citations} && {selectedCitationStyle} ">
-    <f:foreach each="{citations}" as="citation" key="citationIndex">
+    <f:for each="{citations}" as="citation" key="citationIndex">
         <f:if condition="{citation.style} == {selectedCitationStyle}">
             <f:then>
                 <f:format.html>{citation.citation}</f:format.html>
             </f:then>
         </f:if>
-    </f:foreach>
+    </f:for>
 </f:if>
 
 </html>
