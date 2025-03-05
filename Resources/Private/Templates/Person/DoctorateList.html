@@ -1,0 +1,24 @@
+<html
+        xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        data-namespace-typo3-fluid="true" lang="en">
+
+<f:layout name="Default"/>
+
+<f:section name="Main">
+    <f:if condition="{person}">
+        <div class="uzk15__editorblock default">
+            <ul>
+                <f:for each="{person.doctorates}" as="doctorate">
+                    <li>
+                        <span>{doctorate.title}, </span>
+                        <span><f:translate key="doctorate.courseOfStudy" />: {doctorate.details.courseOfStudy}, </span>
+                        <span><f:translate key="doctorate.language" />: {doctorate.details.language}</span>
+                    </li>
+                </f:for>
+            </ul>
+        </div>
+    </f:if>
+
+</f:section>
+
+</html>
