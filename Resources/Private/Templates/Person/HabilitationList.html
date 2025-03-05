@@ -1,0 +1,24 @@
+<html
+        xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        data-namespace-typo3-fluid="true" lang="en">
+
+<f:layout name="Default"/>
+
+<f:section name="Main">
+    <f:if condition="{person}">
+        <div class="uzk15__editorblock default">
+            <ul>
+                <f:for each="{person.habilitations}" as="habilitation">
+                    <li>
+                        <span>{habilitation.title}, </span>
+                        <span><f:translate key="habilitation.status"/>: {habilitation.details.status}, </span>
+                        <span><f:translate key="habilitation.language"/>: {habilitation.details.language}</span>
+                    </li>
+                </f:for>
+            </ul>
+        </div>
+    </f:if>
+
+</f:section>
+
+</html>
