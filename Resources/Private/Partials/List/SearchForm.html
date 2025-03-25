@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true" lang="en">
+
+<f:layout name="Default" />
+
+<div class="uzk15__grid_100 uzk15__flexcontainer">
+    <div class="uzk15_contentright">
+        <f:form action="{action}" controller="{controller}" enctype="multipart/form-data" class="uzk15__search uzk15__standardsearchform uzk15__webforms">
+            <div class="mt-2 flex">
+                <div class="-mr-px grid grow grid-cols-1 focus-within:relative">
+                    <f:form.textfield id="search" name="searchWord" placeholder="Search..." value="{searchWord}" class="" />
+                </div>
+                <f:form.submit value="Search" class="" />
+            </div>
+        </f:form>
+    </div>
+</div>
+
+</html>
