@@ -86,8 +86,14 @@
                         </div>
                     </f:if>
                 </dl>
-            </div>
 
+                <f:if condition="{doctorate.details.dynamicObjects}">
+                    <f:then>
+                        <f:render partial="DynamicObjects" arguments="{dynamicObjects: doctorate.details.dynamicObjects}" />
+                    </f:then>
+                </f:if>
+
+            </div>
         </div>
     </f:if>
     <div class="px-4 py-5 sm:p-6">
