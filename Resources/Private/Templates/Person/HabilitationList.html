@@ -7,15 +7,9 @@
 <f:section name="Main">
     <f:if condition="{person}">
         <div class="uzk15__editorblock default">
-            <ul>
-                <f:for each="{person.habilitations}" as="habilitation">
-                    <li>
-                        <span>{habilitation.title}, </span>
-                        <span><f:translate key="habilitation.status"/>: {habilitation.details.status}, </span>
-                        <span><f:translate key="habilitation.language"/>: {habilitation.details.language}</span>
-                    </li>
-                </f:for>
-            </ul>
+            <f:if condition="{habilitations}">
+                <f:render partial="SelectedPerson/HabilitationList" arguments="{habilitations: habilitations}"/>
+            </f:if>
         </div>
     </f:if>
 
