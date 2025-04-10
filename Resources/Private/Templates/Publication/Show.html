@@ -101,8 +101,8 @@
     <ul class="f3-widget-paginator">
         <li class="previous">
             <f:link.action
-                    action="index"
-                    arguments="{currentPageNumber:currentPageNumber}"
+                    action="{listAction}"
+                    arguments="{currentPageNumber:currentPageNumber, searchWord:searchWord}"
             >
                 <f:translate key="ShowBackToList" extensionName="HioTypo3Connector"/>
             </f:link.action>

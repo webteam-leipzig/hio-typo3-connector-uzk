@@ -6,7 +6,7 @@
     <li>
         <span>"<f:link.action
                 action="show"
-                arguments="{doctorate: doctorate.uid, currentPageNumber: currentPageNumber}"
+                arguments="{doctorate: doctorate.uid, currentPageNumber: currentPageNumber, searchWord: searchWord, listAction:action}"
         >{doctorate.title}</f:link.action>", </span>
         <span><f:translate key="doctorate.courseOfStudy" />: {doctorate.details.courseOfStudy}, <f:translate key="doctorate.language" />: {doctorate.details.language}</span>
     </li>

@@ -7,7 +7,8 @@
                 <f:then>
                     <li class="previous">
                         <f:link.action
-                                arguments="{currentPageNumber:pagination.previousPageNumber}"
+                                action="{action}"
+                                arguments="{currentPageNumber:pagination.previousPageNumber, searchWord:searchWord}"
                         >
                             <f:translate key="ListPaginationPrevious" extensionName="HioTypo3Connector" />
                         </f:link.action>
@@ -25,7 +26,8 @@
                     <f:else>
                         <li>
                         <f:link.action
-                                arguments="{currentPageNumber:page}"
+                                action="{action}"
+                                arguments="{currentPageNumber:page, searchWord:searchWord}"
                         >
                             {page}
                         </f:link.action>
@@ -39,7 +41,8 @@
                 <f:then>
                     <li class="next">
                         <f:link.action
-                                arguments="{currentPageNumber:pagination.nextPageNumber}"
+                                action="{action}"
+                                arguments="{currentPageNumber:page, searchWord:searchWord}"
                         >
                             <f:translate key="ListPaginationNext" extensionName="HioTypo3Connector" />
                         </f:link.action>

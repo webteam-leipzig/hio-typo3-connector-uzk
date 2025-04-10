@@ -32,7 +32,8 @@
     <ul class="f3-widget-paginator">
         <li class="previous">
             <f:link.action
-                    arguments="{currentPageNumber:pagination.previousPageNumber}"
+                    action="{listAction}"
+                    arguments="{currentPageNumber:currentPageNumber, searchWord:searchWord}"
             >
                 <f:translate key="ListPaginationPrevious" extensionName="HioTypo3Connector" />
             </f:link.action>
