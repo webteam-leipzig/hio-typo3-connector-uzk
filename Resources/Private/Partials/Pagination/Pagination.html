@@ -8,7 +8,7 @@
                     <li class="previous">
                         <f:link.action
                                 action="{action}"
-                                arguments="{currentPageNumber:pagination.previousPageNumber, searchWord:searchWord}"
+                                arguments="{currentPageNumber:pagination.previousPageNumber, searchTerm:searchTerm}"
                         >
                             <f:translate key="ListPaginationPrevious" extensionName="HioTypo3Connector" />
                         </f:link.action>
@@ -27,7 +27,7 @@
                         <li>
                         <f:link.action
                                 action="{action}"
-                                arguments="{currentPageNumber:page, searchWord:searchWord}"
+                                arguments="{currentPageNumber:page, searchTerm:searchTerm}"
                         >
                             {page}
                         </f:link.action>
@@ -42,7 +42,7 @@
                     <li class="next">
                         <f:link.action
                                 action="{action}"
-                                arguments="{currentPageNumber:page, searchWord:searchWord}"
+                                arguments="{currentPageNumber:page, searchTerm:searchTerm}"
                         >
                             <f:translate key="ListPaginationNext" extensionName="HioTypo3Connector" />
                         </f:link.action>

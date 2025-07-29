@@ -6,7 +6,7 @@
     <li>
         <span>"<f:link.action
                     action="show"
-                    arguments="{project: project.uid, currentPageNumber: currentPageNumber, searchWord: searchWord, listAction:action}"
+                    arguments="{project: project.uid, currentPageNumber: currentPageNumber, searchTerm: searchTerm, listAction:action}"
             >{project.title}</f:link.action>", </span>
         <span><f:translate key="hio.list.project.startDate" />: <f:format.date format="d.m.Y" >{project.details.startDate}</f:format.date>, <f:translate key="hio.list.project.status" />: {project.details.status}</span>
     </li>

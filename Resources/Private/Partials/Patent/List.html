@@ -7,14 +7,14 @@
         <div class="uzk15__editorblock default">
             <ul role="list" class="">
                 <f:for each="{paginator.paginatedItems}" as="patent">
-                    <f:render partial="Patent/List/Item" arguments="{patent:patent, currentPageNumber: paginator.currentPageNumber, action:action, searchWord: searchWord}" />
+                    <f:render partial="Patent/List/Item" arguments="{patent:patent, currentPageNumber: paginator.currentPageNumber, action:action, searchTerm: searchTerm}" />
                 </f:for>
             </ul>
         </div>
         <f:if condition="{pagination}">
             <f:then>
                 <div class="py-4">
-                    <f:render partial="Pagination/Pagination" arguments="{pagination: pagination, currentPageNumber: paginator.currentPageNumber, action:action, searchWord: searchWord}" />
+                    <f:render partial="Pagination/Pagination" arguments="{pagination: pagination, currentPageNumber: paginator.currentPageNumber, action:action, searchTerm: searchTerm}" />
                 </div>
             </f:then>
         </f:if>
